@@ -1,0 +1,42 @@
+/* Success Page Style */
+.specific-page .user_option a{
+  color: #000;
+}
+
+.specific-page .custom_menu-btn span{
+  background-color: #000;
+}
+@media (max-width: 992px) {
+  .specific-page .custom_menu-btn .menu_btn-style button span {
+      background-color: #ffffff;
+  }
+}
+
+.check-svg {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.button {
+  position: relative;
+  top: -100px;
+  background-color: #240a5e;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 20px;
+  color: white;
+}
+
+.button:hover {
+  background-color: #FFF;
+  color: 240a5e;
+  border-color: #240a5e;
+
+}
+
+/* %%%%%%%%%%*/

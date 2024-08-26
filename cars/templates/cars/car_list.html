@@ -1,0 +1,56 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block title %}List of Cars{% endblock title %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'users/css/profile.css'%}">{% endblock css %}
+{% block content %}
+<div class="specific-page">
+  {% include "header.html" %}
+</div>
+  <!-- best section -->
+
+  <section style="padding-top:100px;" class="best_section">
+    <div class="container">
+      <div class="book_now">
+        <div class="detail-box">
+          <h2>
+            Our Best Cars
+          </h2>
+          <p>
+            It is a long established fact that a reader will be distracted by the
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end best section -->
+
+  <!-- rent section -->
+
+  <section class="rent_section layout_padding">
+    <div class="container">
+      <div class="rent_container">
+        {% for car in cars %}
+        {% if car.available %}
+        <div class="box">
+          <div class="img-box">
+            <img src="{{car.cars_image.url}}" alt="">
+          </div>
+          <div class="price">
+            <a href="{% url 'add_to_cart' car.id %}">
+              ${{car.price_per_day}}
+            </a>
+          </div>
+          <div class="price pt-3">
+            <h5>{{car.make}}</h5>
+            <h6>Model : {{car.model}}</h6>
+            <p>Year : {{car.year}}</p>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+  </section>
+{% endblock content %}

@@ -1,0 +1,33 @@
+.specific-page .user_option a{
+    color: #000;
+}
+.specific-page .custom_menu-btn span{
+    background-color: #000;
+}
+@media (max-width: 992px) {
+    .specific-page .custom_menu-btn .menu_btn-style button span {
+        background-color: #ffffff;
+    }
+}
+.form-input input{
+    border-radius: 0;
+    margin-bottom: 10px;
+}
+
+.form-input input:focus{
+    border-color: #240a5e;
+    box-shadow: none;
+}
+
+form .btn{
+    background-color: #240a5e;
+    border-radius: 0;
+    color: white;
+    padding: 10px 20px 10px 20px;
+}
+
+form .btn:hover{
+    background-color: #fff;
+    border-color: #240a5e;
+    color: #240a5e;
+}
